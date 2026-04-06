@@ -1,0 +1,164 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* ─── Header ───────────────────────────────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface-raised);
+  flex-shrink: 0;
+  gap: 12px;
+}
+
+.tabs {
+  display: flex;
+  gap: 6px;
+}
+
+.tab {
+  padding: 6px 13px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-secondary);
+  transition: all 0.15s;
+}
+
+.tab:hover {
+  color: var(--text-primary);
+  border-color: var(--text-muted);
+}
+
+.tabActive {
+  background: var(--accent);
+  color: #000;
+  border-color: var(--accent);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.btnDownload {
+  padding: 7px 14px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-secondary);
+  transition: all 0.15s;
+  letter-spacing: 0.04em;
+}
+
+.btnDownload:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btnDownload:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.btnCopy {
+  padding: 7px 16px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  background: var(--accent);
+  color: #000;
+  transition: all 0.2s;
+  letter-spacing: 0.04em;
+}
+
+.btnCopy:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.btnCopied {
+  background: var(--success);
+}
+
+/* ─── Content ──────────────────────────────────────────────────────────────── */
+.content {
+  flex: 1;
+  overflow: auto;
+}
+
+.code {
+  margin: 0;
+  padding: 18px 20px;
+  font-size: 12px;
+  line-height: 1.75;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  white-space: pre-wrap;
+  word-break: break-word;
+  min-height: 100%;
+}
+
+.placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.preview {
+  padding: 24px;
+  color: var(--text-primary);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.previewEmpty {
+  padding: 40px 24px;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-style: italic;
+  text-align: center;
+}
+
+/* ─── Footer ───────────────────────────────────────────────────────────────── */
+.footer {
+  padding: 8px 16px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 18px;
+  flex-shrink: 0;
+  background: var(--surface-raised);
+}
+
+.stat {
+  font-size: 10px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+}
+
+.statValue {
+  color: var(--accent);
+  font-weight: 700;
+}

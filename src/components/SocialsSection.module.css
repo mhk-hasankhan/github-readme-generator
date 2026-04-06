@@ -1,0 +1,18 @@
+.socialsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.hint {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 500px) {
+  .socialsGrid {
+    grid-template-columns: 1fr;
+  }
+}

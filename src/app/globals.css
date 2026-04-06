@@ -1,40 +1,67 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #090a0d;
+  --surface: #0f1117;
+  --surface-raised: #14171f;
+  --border: #1c2030;
+  --accent: #7cffd4;
+  --accent2: #a78bfa;
+  --accent-dim: rgba(124, 255, 212, 0.08);
+  --accent-glow: rgba(124, 255, 212, 0.15);
+  --text-primary: #e2e8f0;
+  --text-secondary: #7a8599;
+  --text-muted: #3d4555;
+  --danger: #ef4444;
+  --success: #22c55e;
+  --font-mono: var(--font-mono-loaded, "Space Mono", monospace);
+  --font-body: var(--font-body-loaded, "DM Sans", sans-serif);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html {
-  height: 100%;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 15px;
+  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Selection */
+::selection {
+  background: var(--accent-dim);
+}
+
+/* Reset form elements */
+input,
+textarea,
+select,
+button {
+  font-family: var(--font-body);
 }
 
 a {
@@ -42,8 +69,13 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* Animations */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes float-blob {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
 }

@@ -1,0 +1,118 @@
+.tabs {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 11px;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-secondary);
+  transition: all 0.15s;
+  font-family: var(--font-mono);
+}
+
+.tab:hover {
+  border-color: var(--text-muted);
+  color: var(--text-primary);
+}
+
+.tabActive {
+  background: var(--accent);
+  color: #000;
+  border-color: var(--accent);
+}
+
+.tabBadge {
+  background: var(--accent);
+  color: #000;
+  border-radius: 10px;
+  padding: 0 6px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.tabBadgeActive {
+  background: rgba(0, 0, 0, 0.25);
+  color: #000;
+}
+
+.search {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 12px;
+  padding: 8px 13px;
+  outline: none;
+  font-family: var(--font-body);
+  margin-bottom: 12px;
+  box-sizing: border-box;
+  transition: border-color 0.15s;
+}
+
+.search:focus {
+  border-color: var(--accent);
+}
+
+.search::placeholder {
+  color: var(--text-muted);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.noResults {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.selectedSummary {
+  margin-top: 14px;
+  padding: 10px 12px;
+  background: var(--bg);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.selectedLabel {
+  font-size: 10px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.selectedChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.selectedChip {
+  display: inline-block;
+  padding: 2px 9px;
+  border-radius: 4px;
+  font-size: 10px;
+  cursor: pointer;
+  border: 1px solid;
+  font-family: var(--font-mono);
+  transition: opacity 0.15s;
+}
+
+.selectedChip:hover {
+  opacity: 0.7;
+}

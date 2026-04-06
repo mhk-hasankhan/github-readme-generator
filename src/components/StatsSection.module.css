@@ -1,0 +1,30 @@
+.themePicker {
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+  margin-top: 4px;
+}
+
+.previews {
+  margin-top: 14px;
+}
+
+.previewLabel {
+  font-size: 10px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+.previewCards {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.previewImg {
+  max-width: 100%;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  display: block;
+}
