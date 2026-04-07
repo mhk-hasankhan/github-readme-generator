@@ -7,6 +7,7 @@
 ### Generate a stunning GitHub Profile README in under 60 seconds.
 
 No Markdown knowledge required. Pick your tech, configure your stats, copy and paste.
+🚀 Live : https://readme-forge.netlify.app/
 
 [![Next.js](https://img.shields.io/badge/Next.js_14-000000?style=flat-square&logo=nextdotjs&logoColor=white)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React_18-20232A?style=flat-square&logo=react&logoColor=61DAFB)](https://react.dev)
