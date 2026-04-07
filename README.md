@@ -72,59 +72,6 @@ npm -v    # should print 9.x.x or higher
 
 ---
 
-### Installation
-
-**Step 1 — Create a new Next.js project**
-
-```bash
-npx create-next-app@14 readme-forge
-```
-
-When prompted, answer exactly like this:
-
-```
-✔ Would you like to use TypeScript?              → No
-✔ Would you like to use ESLint?                  → Yes
-✔ Would you like to use Tailwind CSS?            → No
-✔ Would you like to use `src/` directory?        → Yes
-✔ Would you like to use App Router?              → Yes
-✔ Would you like to customize import alias (@/*) → No
-```
-
-**Step 2 — Go into the project folder**
-
-```bash
-cd readme-forge
-```
-
-**Step 3 — Replace the source files**
-
-Download the ReadmeForge source zip. Extract it, then:
-
-- **Delete** the `src/` folder that Next.js created
-- **Copy in** the `src/` folder from the zip
-- **Copy** `jsconfig.json` and `next.config.js` from the zip into the root (replacing existing files)
-
-**Step 4 — Install dependencies & run**
-
-```bash
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser. ✅
-
----
-
-### Build for Production
-
-```bash
-npm run build    # creates optimised production build
-npm run start    # starts production server on port 3000
-```
-
----
-
 ## 📁 Project Structure
 
 ```
