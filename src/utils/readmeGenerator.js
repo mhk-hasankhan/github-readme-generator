@@ -103,22 +103,20 @@ export function generateReadme(form) {
   const socialEntries = Object.entries(socials).filter(([, v]) => v);
   if (socialEntries.length) {
     lines.push(`<h3 align="left">Connect with me:</h3>`);
-    lines.push(`<p align="left">`);
-    socialEntries.forEach(([id, value]) => {
-      lines.push(`<a href="${buildSocialHref(id, value)}" target="_blank"><img src="${buildSocialBadge(id)}" alt="${id}" /></a>`);
+    const socialLinks = socialEntries.map(([id, value]) => {
+      return `<a href="${buildSocialHref(id, value)}" target="_blank"><img src="${buildSocialBadge(id)}" alt="${id}" /></a>`;
     });
-    lines.push(`</p>`);
+    lines.push(`<p align="left">${socialLinks.join(" ")}</p>`);
     lines.push("");
   }
 
   // ── Tech stack badges ──────────────────────────────────────────────────────
   if (techStack.length) {
     lines.push(`<h3 align="left">Languages and Tools:</h3>`);
-    lines.push(`<p align="left">`);
-    techStack.forEach((tech) => {
-      lines.push(`<img src="${buildBadgeUrl(tech)}" alt="${tech.label}" />`);
+    const techBadges = techStack.map((tech) => {
+      return `<img src="${buildBadgeUrl(tech)}" alt="${tech.label}" />`;
     });
-    lines.push(`</p>`);
+    lines.push(`<p align="left">${techBadges.join(" ")}</p>`);
     lines.push("");
   }
 
@@ -126,11 +124,11 @@ export function generateReadme(form) {
   if (githubStats || showStreak || showLangs) {
     lines.push(`<h3 align="left">GitHub Stats:</h3>`);
     lines.push("");
-    lines.push(`<p align="center">`);
-    if (githubStats) lines.push(`  <img src="${buildStatsCard(username, statTheme)}" alt="GitHub Stats" />`);
-    if (showStreak)  lines.push(`  <img src="${buildStreakCard(username, statTheme)}" alt="Streak Stats" />`);
-    if (showLangs)   lines.push(`  <img src="${buildLangsCard(username, statTheme)}" alt="Top Languages" />`);
-    lines.push(`</p>`);
+    const statsImgs = [];
+    if (githubStats) statsImgs.push(`<img src="${buildStatsCard(username, statTheme)}" alt="GitHub Stats" />`);
+    if (showStreak) statsImgs.push(`<img src="${buildStreakCard(username, statTheme)}" alt="Streak Stats" />`);
+    if (showLangs) statsImgs.push(`<img src="${buildLangsCard(username, statTheme)}" alt="Top Languages" />`);
+    lines.push(`<p align="center">${statsImgs.join(" ")}</p>`);
     lines.push("");
   }
 
@@ -159,11 +157,10 @@ export function generateReadme(form) {
   const donationEntries = Object.entries(donations).filter(([, v]) => v);
   if (donationEntries.length) {
     lines.push(`<h3 align="left">Support:</h3>`);
-    lines.push(`<p>`);
-    donationEntries.forEach(([id, value]) => {
-      lines.push(`<a href="${buildDonationHref(id, value)}"><img src="${buildDonationBadge(id)}" /></a>`);
+    const donationLinks = donationEntries.map(([id, value]) => {
+      return `<a href="${buildDonationHref(id, value)}"><img src="${buildDonationBadge(id)}" /></a>`;
     });
-    lines.push(`</p>`);
+    lines.push(`<p>${donationLinks.join(" ")}</p>`);
     lines.push("");
   }
 
