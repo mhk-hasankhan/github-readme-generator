@@ -3,12 +3,12 @@
 import styles from "./LandingPage.module.css";
 
 const FEATURES = [
-  { icon: "⚡", title: "Instant Generation",  desc: "Fill in your details and get a polished README in under a minute." },
-  { icon: "🧰", title: "300+ Tech Badges",    desc: "Pick from every framework, language, and tool you use." },
-  { icon: "📊", title: "Live Stats Cards",    desc: "GitHub stats, streaks, and language charts — all themed." },
-  { icon: "🌐", title: "Social Hub",          desc: "All your social profiles and donation links in one place." },
-  { icon: "🏆", title: "Trophies & Fun",      desc: "GitHub trophies, dev quotes, and random memes." },
-  { icon: "⬡",  title: "Zero Markdown",       desc: "No coding knowledge needed. Just fill, copy, and paste." },
+  { icon: "⚡", title: "Instant Generation", desc: "Fill in your details and get a polished README in under a minute." },
+  { icon: "🧰", title: "300+ Tech Badges", desc: "Pick from every framework, language, and tool you use." },
+  { icon: "📊", title: "Live Stats Cards", desc: "GitHub stats, streaks, and language charts — all themed." },
+  { icon: "🌐", title: "Social Hub", desc: "All your social profiles and donation links in one place." },
+  { icon: "🏆", title: "Trophies & Fun", desc: "GitHub trophies, dev quotes, and random memes." },
+  { icon: "⬡", title: "Zero Markdown", desc: "No coding knowledge needed. Just fill, copy, and paste." },
 ];
 
 export default function LandingPage({ onStart }) {
@@ -53,7 +53,7 @@ export default function LandingPage({ onStart }) {
             BUILD MY README →
           </button>
           <a
-            href="https://github.com"
+            href="https://github.com/mhk-hasankhan/github-readme-generator"
             target="_blank"
             rel="noreferrer"
             className={styles.ctaSecondary}
